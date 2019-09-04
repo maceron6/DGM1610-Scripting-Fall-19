@@ -5,7 +5,7 @@ using UnityEngine;
 public class toon : MonoBehaviour
 {
     string name = "Walter";
-    int hp = 10;
+    int hp = 1;
     float damage = 0.001f;
     bool canFly = true;
     // Start is called before the first frame update
