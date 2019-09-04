@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class toon : MonoBehaviour
 {
+    string name = "Walter";
+    int hp = 10;
+    float damage = 0.001f;
+    bool canFly = true;
     // Start is called before the first frame update
     void Start()
     {
-        string name;
-        int hp;
-        float damage;
-        bool canFly;
+        Debug.Log("name: " + name);
+        Debug.Log("hp: " + hp);
+        Debug.Log("Damage: " + damage);
+        Debug.Log("Fly? " + canFly);
     }
-
    
 }
