@@ -17,7 +17,7 @@ public class funkPractice : MonoBehaviour
         CalcSub(10, 8);
         Calcmult(8, 3);
         Rage(command, action);
-        Wrath(command, location)
+        Wrath(command, location);
     }
     
     int CalcAdd (int n1, int n2)
@@ -45,6 +45,6 @@ public class funkPractice : MonoBehaviour
 
     void Wrath(string comm, string loc)
     {
-        Debug.Log(comm + " " + loc)
+        Debug.Log(comm + " " + loc);
     }
 }
