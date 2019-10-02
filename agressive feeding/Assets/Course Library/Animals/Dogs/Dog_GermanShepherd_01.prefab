@@ -4664,6 +4664,7 @@ GameObject:
   m_Component:
   - component: {fileID: 495300}
   - component: {fileID: 9594340}
+  - component: {fileID: 1055984466}
   m_Layer: 0
   m_Name: Dog_GermanShepherd_01
   m_TagString: Untagged
@@ -4741,6 +4742,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1055984466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c9ec643dfc164b4d8b1739350330336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalImput: 0
+  xrange: 22
+  projectilePrefab: {fileID: 5973113092765328509, guid: 5204eedc8fe979a4e980cbcd421edc1b,
+    type: 3}
 --- !u!1 &180608
 GameObject:
   m_ObjectHideFlags: 0

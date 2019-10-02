@@ -7,6 +7,7 @@ public class playerController : MonoBehaviour
     public float horizontalImput;
     private float speed = 20f;
     public float xrange = 22.0f;
+    public GameObject projectilePrefab; 
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +28,11 @@ public class playerController : MonoBehaviour
             transform.position = new Vector3(xrange, transform.position.y, transform.position.z);
         }
 
-
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            //Dakka Dakka Dakka
+            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+        }
         horizontalImput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalImput * Time.deltaTime * speed);
     }
