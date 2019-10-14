@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 16
-  productGUID: c1d11a12ffa3b4d41bfb4d15558173ba
+  productGUID: 00000000000000000000000000000000
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -614,7 +614,6 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
-    Collab: 1
     UNet: 1
   luminIcon:
     m_Name: 
@@ -637,7 +636,7 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   cloudProjectId: ae2ae95d-7854-4908-ae03-875b51aee9cd
   framebufferDepthMemorylessMode: 0
-  projectName: agressive feeding
+  projectName: 
   organizationId: maceron6
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
