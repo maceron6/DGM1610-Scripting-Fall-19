@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PlayerControll : MonoBehaviour
 {
+    public float xrange = 30f;
+    public float horzInput;
+    public float vertInput;
+    public float speed = 10f;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +18,16 @@ public class PlayerControll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (transform.position.x < -xrange)
+        {
+            transform.position = new Vector3(-xrange, transform.position.y, transform.position.z);
+        }
+
+        if (transform.position.x > xrange)
+        {
+            transform.position = new Vector3(xrange, transform.position.y, transform.position.z);
+        }
+
         
     }
 }
