@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerControll : MonoBehaviour
 {
-    public float xrange = 30f;
+    public float xrange = 9.3f;
     public float horzInput;
     public float vertInput;
     public float speed = 10f;
@@ -31,5 +31,15 @@ public class PlayerControll : MonoBehaviour
         transform.Translate(Vector3.right * horzInput * Time.deltaTime * speed);
 
         transform.Translate(Vector3.forward * vertInput * Time.deltaTime * speed);
+
+        if(transform.position.x > xrange)
+        {
+            transform.position = new Vector3 (xrange, transform.position.y, transform.position.z);
+        }
+
+        if(transform.position.x < xrange)
+        {
+            transform.position = new Vector3 (-xrange, transform.position.y, transform.position.z);
+        }
     }
 }

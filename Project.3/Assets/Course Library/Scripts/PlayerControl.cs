@@ -8,6 +8,7 @@ public class PlayerControl : MonoBehaviour
     public float jumpForce;
     public float gravMod;
     public bool onGround = true;
+    public bool gameOver = false;
 
 
     // Start is called before the first frame update
@@ -30,6 +31,16 @@ public class PlayerControl : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        onGround = true;
+        
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            onGround = true;
+        }
+
+        else if (collision.gameObject.CompareTag("Pipe"))
+        {
+            gameOver = true;
+            Debug.Log("YOU DIED");
+        }
     }
 }

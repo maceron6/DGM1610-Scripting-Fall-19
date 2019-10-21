@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FlyForward : MonoBehaviour
 {
-    private float speed = 1f;
+    public float speed = 1.0f;
 
     // Start is called before the first frame update
     void Start()
