@@ -24,14 +24,6 @@ public class PlayerControll : MonoBehaviour
             Instantiate(projectilePref, transform.position, projectilePref.transform.rotation);
         }
         
-        horzInput = Input.GetAxis("Horizontal");
-
-        vertInput = Input.GetAxis("Vertical");
-
-        transform.Translate(Vector3.right * horzInput * Time.deltaTime * speed);
-
-        transform.Translate(Vector3.forward * vertInput * Time.deltaTime * speed);
-
         if(transform.position.x > xrange)
         {
             transform.position = new Vector3 (xrange, transform.position.y, transform.position.z);
@@ -41,5 +33,13 @@ public class PlayerControll : MonoBehaviour
         {
             transform.position = new Vector3 (-xrange, transform.position.y, transform.position.z);
         }
+
+         horzInput = Input.GetAxis("Horizontal");
+
+        vertInput = Input.GetAxis("Vertical");
+
+        transform.Translate(Vector3.right * horzInput * Time.deltaTime * speed);
+
+        transform.Translate(Vector3.forward * vertInput * Time.deltaTime * speed);
     }
 }
