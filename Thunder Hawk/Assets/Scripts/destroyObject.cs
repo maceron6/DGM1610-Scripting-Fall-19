@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlyForward : MonoBehaviour
+public class destroyObject : MonoBehaviour
 {
-    public float speed = 1.0f;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -15,8 +13,12 @@ public class FlyForward : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.forward * Time.deltaTime * speed);
+        
     }
 
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        Destroy(gameObject);
+        Destroy(other.gameObject);
+    }
 }

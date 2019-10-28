@@ -10,6 +10,11 @@ public class PlayerControl : MonoBehaviour
     public bool onGround = true;
     public bool gameOver = false;
     private Animator playerAnim;
+    public ParticleSystem explosionParticle;
+    public ParticleSystem dirtParticle;
+    public AudioClip jump;
+    public AudioClip crash;
+    private AudioSource playerAudio;
 
 
     // Start is called before the first frame update
@@ -19,6 +24,7 @@ public class PlayerControl : MonoBehaviour
        // playerRB.AddForce(Vector3.up * 1000);
        Physics.gravity *= gravMod;
        playerAnim = GetComponent<Animator>();
+       playerAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -29,6 +35,8 @@ public class PlayerControl : MonoBehaviour
             playerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             onGround = false;
             playerAnim.SetTrigger("Jump_trig");
+            dirtParticle.Stop();
+            playerAudio.PlayOneShot(jump, 1.0f);
         }
 
     }
@@ -46,6 +54,10 @@ public class PlayerControl : MonoBehaviour
             Debug.Log("YOU DIED");
             playerAnim.SetBool("Death_b", true);
             playerAnim.SetInteger("DeathType_int", 1);
+            explosionParticle.Play();
+            dirtParticle.Stop();
+            playerAudio.PlayOneShot(crash, 1.0f);
+
         }
     }
 }

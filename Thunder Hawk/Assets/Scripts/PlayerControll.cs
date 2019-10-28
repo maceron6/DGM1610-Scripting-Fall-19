@@ -9,6 +9,8 @@ public class PlayerControll : MonoBehaviour
     public float vertInput;
     public float speed = 10f;
     public GameObject projectilePref;
+    public float topBound = -5f;
+    public float bottomBound = -12.5f;
     
     // Start is called before the first frame update
     void Start()
@@ -29,9 +31,14 @@ public class PlayerControll : MonoBehaviour
             transform.position = new Vector3 (xrange, transform.position.y, transform.position.z);
         }
 
-        if(transform.position.x < xrange)
+        if(transform.position.x < -xrange)
         {
             transform.position = new Vector3 (-xrange, transform.position.y, transform.position.z);
+        }
+
+        if(transform.position.z > topBound)
+        {
+            
         }
 
          horzInput = Input.GetAxis("Horizontal");
