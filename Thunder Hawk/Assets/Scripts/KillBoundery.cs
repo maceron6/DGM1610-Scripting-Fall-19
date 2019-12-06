@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class KillBoundery : MonoBehaviour
 {
-    private float topBound = 0.0f;
+    private float topBound = 3f;
     private float bottomBound = -15.0f;
 
     // Start is called before the first frame update
